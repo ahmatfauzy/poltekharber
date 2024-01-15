@@ -1,0 +1,303 @@
+:root {
+  primary-color: #171f32, #ff5421, #f3f8f9;
+}
+
+body {
+}
+
+/* nav */
+nav.putih {
+  background-color: white;
+}
+
+nav .container img.berwarna {
+  display: none;
+}
+
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff5421;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Tampilan awal */
+.navbar {
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  color: white;
+}
+
+.navbar.navbar-transparent .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-scrolled {
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.navbar-scrolled .navbar-nav .nav-link {
+  color: black;
+}
+
+/* home */
+#home {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -9999;
+}
+
+/* Animasi masuk */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-h1 {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.animated-h2 {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* about */
+#about {
+  padding-top: 80px;
+}
+
+/* prodi */
+#prodi {
+  padding-top: 45px;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+}
+
+.prodi-box {
+  height: 200px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+}
+
+.prodi-box {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+#prodi a {
+  text-decoration: none;
+  color: #ff5421;
+  font-weight: bold;
+}
+
+#prestasi {
+  padding-top: 20px;
+  background-color: #f3f8f9;
+}
+
+#pendaftaran {
+  background-color: #171f32;
+}
+
+#partnership {
+  background-color: #f3f8f9;
+  padding-top: 20px;
+}
+
+.perusahaan img {
+  margin: 0 10px;
+  margin-bottom: 60px;
+}
+
+footer {
+  background-color: #171f32;
+}
+
+.site-footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-right {
+  width: 300px;
+  height: 200px;
+}
+
+footer i {
+  color: #ff5421;
+  font-size: 18px;
+  font-style: normal;
+  margin: 10px;
+}
+
+/* custom tampilan hp */
+@media (max-width: 767px) {
+  #video-bg {
+    height: auto;
+    width: 100%;
+  }
+
+  #home h1 {
+    padding-top: 500px;
+  }
+
+  h2 {
+  }
+
+  #about .container h2 {
+    margin-top: 50px;
+  }
+
+  .container .about {
+    margin-top: -50px;
+  }
+
+  .container .row .col-md-6 img {
+    padding-top: 10px;
+  }
+
+  h5 {
+    margin-top: -90px;
+  }
+
+  ./prodi-box {
+    /* gak jadi */
+    justify-content: center;
+    text-align: center;
+    width: 450px;
+  }
+
+  #prestasi .container h2 {
+    margin-top: 70px;
+  }
+
+  #prestasi .card {
+    height: 100%;
+  }
+
+  #pendaftaran h2 {
+    margin-top: 50px;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 1rem);
+    height: 200px;
+    height: auto !important;
+    margin-top: 10px;
+  }
+  .card p {
+    padding-top: 0px;
+  }
+
+  #prodi .card {
+    width: calc(100% - 20px);
+    margin: 0 auto 20px;
+    border-radius: 5px;
+  }
+
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar-toggler {
+    margin-right: 0;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    justify-content: center;
+    background-color: #adacac;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    padding: 5px 15px;
+    color: #333;
+  }
+
+  .card {
+    width: calc(100% - 20px);
+    margin: 0 auto 20px;
+    border-radius: 5px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
